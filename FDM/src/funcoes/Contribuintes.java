@@ -56,5 +56,9 @@ public class Contribuintes {
 		return impBT;
 	}
 	
+	public static double abatimento(){
+		double valorAbaterImposto = 0;
+	}
+	
 
 }
