@@ -64,8 +64,9 @@ public class Contribuintes {
 		sc.close();
 	}
 
-	public static double impostoSobreSalario(double salario, double rendaAnualSalario){
+	public static double impostoSobreSalario(double salario){
 		double impss = 0;
+		double rendaAnualSalario = 0;
 		salario = rendaAnualSalario / 12;
 		if (salario >= 3000 && salario < 5000){
 			impss = ((salario * 0.1) * 12);
@@ -76,8 +77,9 @@ public class Contribuintes {
 		return impss;
 	}
 
-	public static double impostoSobreServicos(double rendaPrestDeservicos, double rendaACPS) {
+	public static double impostoSobreServicos(double rendaPrestDeservicos) {
 		double impssv = 0;
+		double rendaACPS = 0;
 		rendaPrestDeservicos = rendaACPS / 12;
 		if(rendaPrestDeservicos > 0){
 			impssv = ((rendaPrestDeservicos * 0.2) * 12);
@@ -85,8 +87,9 @@ public class Contribuintes {
 		return impssv;
 	}
 
-	public static double impostoSobreGC(double ganhoCapital, double rendaACGC) {
+	public static double impostoSobreGC(double ganhoCapital) {
 		double impsgc = 0;
+		double rendaACGC = 0;
 		ganhoCapital = rendaACGC / 12;
 		if(ganhoCapital > 0) {
 			impsgc = ((ganhoCapital * 0.2) * 12);
@@ -94,9 +97,9 @@ public class Contribuintes {
 		return impsgc;
 	}
 
-	public static double impostoBrutoTotal(double impostoSobreSalario, double impostoSobreServicos, double impostoSobreGC ) {
+	public static double impostoBrutoTotal(double salario, double rendaPrestDeservicos, double ganhoCapital ) {
 		double impBT = 0;
-		return impBT = impostoSobreSalario + impostoSobreServicos + impostoSobreGC;
+		return impBT = salario + rendaPrestDeservicos + ganhoCapital;
 	}
 
 	public static void showResult( double impBT) {
