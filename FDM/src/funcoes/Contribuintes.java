@@ -117,7 +117,7 @@ public class Contribuintes {
 //		return maximoDedutivel = impostoBrutoTotal * 0.3;
 //	}
 	
-	public static double abatimento(double rendaACS, double rendaACPS, double rendaACGC, double gastosM, double gastosE ) {
+	public static double abatimento(double salario, double rendaPrestDeservicos, double ganhoCapital, double gastosM, double gastosE  ) {
 		double abati = 0;
 		double gdedutivel = 0;
 		double mdedutivel = 0;
